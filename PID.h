@@ -3,33 +3,33 @@
 
 typedef struct {
 
-	/* Controller gains */
-	float Kp;
-	float Ki;
-	float Kd;
+    /* Controller gains */
+    float Kp;
+    float Ki;
+    float Kd;
 
-	/* Derivative low-pass filter time constant */
-	float tau;
+    /* Derivative low-pass filter time constant */
+    float tau;
 
-	/* Output limits */
-	float limMin;
-	float limMax;
-	
-	/* Integrator limits */
-	float limMinInt;
-	float limMaxInt;
+    /* Output limits */
+    float limMin;
+    float limMax;
 
-	/* Sample time (in seconds) */
-	float T;
+    /* Integrator limits */
+    float limMinInt;
+    float limMaxInt;
 
-	/* Controller "memory" */
-	float integrator;
-	float prevError;			/* Required for integrator */
-	float differentiator;
-	float prevMeasurement;		/* Required for differentiator */
+    /* Sample time (in seconds) */
+    float T;
 
-	/* Controller output */
-	float out;
+    /* Controller "memory" */
+    float integrator;
+    float prevError;            /* Required for integrator */
+    float differentiator;
+    float prevMeasurement;      /* Required for differentiator */
+
+    /* Controller output */
+    float out;
 
 } PIDController;
 
